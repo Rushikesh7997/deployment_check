@@ -1,11 +1,14 @@
 const express = require("express")
+require("dotenv").config()
 
 const app = express();
 
+const PORT = process.env.PORT || 8500
+
 app.get("/",(req,res)=>{
-    res.send("hello rishi, this is check of deploymet")
+    res.send("hello rishi, this is check of deploymet.")
 })
 
-app.listen(8000,()=>{
-    console.log("app is running")
+app.listen(PORT,()=>{
+    console.log(`app is running on ${PORT}`)
 })
